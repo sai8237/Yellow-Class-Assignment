@@ -48,7 +48,6 @@ function App() {
     axios
       .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
       .then(res => {
-        console.log(res.data);
         setImage([...images, ...res.data]);
       })
   }

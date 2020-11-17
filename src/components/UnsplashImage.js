@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import {Modal} from './modal';
 
@@ -22,7 +22,7 @@ export const UnsplashImage = ({images, index, url, key }) => {
     <>
       <Img onClick={handleClick} src={url} alt="" />
       { modal && (
-        <Modal selectedImg={url} setSelectedImg={setModal} />
+        <Modal images = {images} selectedImg={url} setSelectedImg={setModal} index = {index}/>
       )}
     </>
   )

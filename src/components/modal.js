@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 export const Modal = ({ images, setSelectedImg, selectedImg, index }) => {
   const [idex, setIndex] = useState(index);
-  console.log(idex);
   const handleClick = (e) => {
     if (e.target.classList.contains('backdrop')) {
       setSelectedImg(false);
